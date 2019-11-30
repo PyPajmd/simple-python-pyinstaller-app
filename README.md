@@ -1,5 +1,17 @@
 # simple-python-pyinstaller-app
 
+## Note:
+
+This example is meant to run inthe BlueOcean Jenkins container so much so
+that running the the "delivery" stage ( i.e. pyinstaller) on a bare metal host
+will fail. The entrypoint of the pyinstaller container requires to be root to
+run it!  
+To run it successfully the agent container must be run with an argument specifying the user:  
+ args '-u 0:0'
+
+
+## Purpose
+
 This repository is for the
 [Build a Python app with PyInstaller](https://jenkins.io/doc/tutorials/build-a-python-app-with-pyinstaller/)
 tutorial in the [Jenkins User Documentation](https://jenkins.io/doc/).
